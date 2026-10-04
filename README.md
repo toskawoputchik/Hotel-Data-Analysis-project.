@@ -113,3 +113,44 @@ plt.close()
 print(
     "\nAnalysis complete! Charts 'monthly_revenue.png' and 'weekly_occupancy_trends.png' saved successfully."
 )
+# Hotel-Data-Analysis
+
+## Project Description
+This project analyzes hotel operational efficiency and financial performance using historical daily booking data. By evaluating key hospitality metrics such as Occupancy Rate, Average Daily Rate (ADR), and total Revenue, this analysis uncovers operational bottlenecks, peak booking seasons, and weekly demand patterns to support data-driven business decisions.
+
+## Dataset Description
+The dataset contains daily operational metrics spanning a full calendar year.
+* **Date**: The specific calendar date of operations.
+* **Rooms Available**: Total inventory of rooms available for sale (constant at 150 rooms).
+* **Rooms Sold**: Total number of rooms successfully booked and occupied.
+* **ADR (Average Daily Rate)**: The average rental income per paid occupied room in a given day.
+* **Revenue**: Total daily income generated from room sales ($\text{Rooms Sold} \times \text{ADR}$).
+
+## Methodology
+1. **Data Cleaning & Preprocessing**: Checked for missing values, validated date formats, and ensured data integrity.
+2. **Feature Engineering**: 
+   * Calculated **Occupancy Rate** as a percentage ($\frac{\text{Rooms Sold}}{\text{Rooms Available}} \times 100$).
+   * Extracted temporal features (`Month`, `Day of Week`) to perform aggregations.
+3. **Statistical Aggregation**: Grouped data by months and days of the week to identify macro-trends and micro-trends.
+4. **Data Visualization**: Generated trend lines and bar charts using Matplotlib to effectively communicate insights.
+
+## Visualizations
+
+### 1. Monthly Revenue Performance
+![Monthly Revenue](monthly_revenue.png)
+*Highlights revenue fluctuations across the year, pointing out peak holiday seasons and shoulder periods.*
+
+### 2. Weekly Occupancy Trends
+![Weekly Occupancy](weekly_occupancy_trends.png)
+*Illustrates average daily occupancy rates, highlighting weekend surges vs. weekday dips.*
+
+## Conclusions & Business Recommendations
+* **Weekend Surges**: Occupancy rates peak significantly on Fridays and Saturdays, driven by leisure travelers. Dynamic pricing strategies should be applied during these high-demand days to maximize ADR.
+* **Weekday Lulls**: Monday through Wednesday exhibit lower occupancy. Management should consider corporate packages, remote-work bundles, or business conference promotions to boost mid-week utilization.
+* **Revenue Optimization**: Total revenue strongly correlates with occupancy rather than ADR alone; maintaining a healthy baseline occupancy during off-peak months is essential for yearly profitability.
+
+## Skills Demonstrated
+* **Python**: Core programming and data manipulation.
+* **Pandas & NumPy**: Data cleaning, aggregation, and feature engineering.
+* **Data Visualization**: Matplotlib plotting for executive reporting.
+* **Statistics & Business Analytics**: Deriving actionable hospitality metrics (ADR, Occupancy, Revenue).
